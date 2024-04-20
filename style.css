@@ -2,20 +2,20 @@
 
 html,
 body {
-    height: 100vh;
-    /* width: 100vw; Set the viewport height to match the browser's height */
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    /* overflow-x:hidden; Enable horizontal scrolling */
 }
 
 
 .container {
-    width: 1317px;
+    width: 100%;
     height: 843px;
     margin-top: 80px;
     margin-left: 80px;
     display: flex;
+    flex-direction: column;
 }
 
 .leftbox {
@@ -51,7 +51,6 @@ body {
 .rightbox {
     flex: 1;
     padding: 20px;
-    /* color: grey; */
     padding-left: 65px;
 }
 
@@ -88,8 +87,8 @@ body {
 
 .color-container {
   display: inline-block;
-  padding: 5px; /* Add padding */
-  border: 2px solid transparent; /* Initially transparent border */
+  padding: 5px; 
+  border: 2px solid transparent;
 }
 
 .color-box {
@@ -97,18 +96,6 @@ body {
   height: 64px;
   cursor: pointer;
 }
-
-
-
-
-/* .Small-child {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-} */
 
 .size {
     width: 497px;
@@ -244,4 +231,30 @@ body {
     opacity: 70%;
     color: grey;
 }
+
+.leftbox,
+.rightbox {
+    width: 100%; 
+}
+
+@media (min-width: 768px) { 
+    .container {
+        width: auto;
+        flex-direction: row;
+    }
+
+    .leftbox {
+        flex: 1;
+    }
+
+    .rightbox {
+        flex: 1;
+        margin-top: 20px;
+        margin-left: 20px; 
+    }
+
+}
+
+  
+  
 
